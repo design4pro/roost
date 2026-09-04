@@ -1,0 +1,11 @@
+# The key every browser must present to this hub.
+#
+# The one-click deploy asks for it by reading this file, and shows the
+# description from `cloudflare.bindings` in package.json next to the field. A
+# deployment without it refuses every request rather than serving everyone -
+# see src/worker/auth/verify.ts.
+#
+# Locally, copy this file to `.dev.vars` and use any string you like; the same
+# string goes into the extension's onboarding screen. In production it should be
+# 256 bits of randomness, which is what the extension generates for you.
+PAIRING_SECRET="local-development-pairing-key"

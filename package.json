@@ -1,0 +1,83 @@
+{
+  "name": "roost",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "dev:worker": "wrangler dev --port 3011",
+    "build": "wrangler deploy --dry-run --outdir .worker-build",
+    "build:extension": "wxt build",
+    "zip": "wxt zip",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint",
+    "format": "prettier --write . && eslint --fix",
+    "check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "e2e": "playwright test",
+    "e2e:update": "playwright test --update-snapshots",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "verify:cloud": "tsx scripts/verify-cloud.ts",
+    "postinstall": "wxt prepare || true",
+    "prepare": "husky || true"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.14.10",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@cloudflare/vitest-pool-workers": "^0.22.0",
+    "@cloudflare/workers-types": "^5.20260903.1",
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/eslint-config": "^0.4.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.6",
+    "@types/ws": "^8.18.1",
+    "@vitest/coverage-istanbul": "^4.1.11",
+    "@webext-core/fake-browser": "^2.0.1",
+    "@wxt-dev/module-react": "^1.2.2",
+    "eslint": "^10.9.1",
+    "husky": "^9.1.7",
+    "jsdom": "^30.0.1",
+    "lint-staged": "^17.4.1",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.128.0",
+    "ws": "^8.21.3",
+    "wxt": "^0.21.4"
+  },
+  "cloudflare": {
+    "bindings": {
+      "PAIRING_SECRET": {
+        "description": "The key your browsers present to this hub. Paste the one Roost generated on its first-run screen. Anyone holding it can read and change every tab and bookmark you sync."
+      }
+    }
+  }
+}

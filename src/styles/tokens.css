@@ -1,0 +1,38 @@
+/**
+ * Chrome's own colours, by hand.
+ *
+ * An extension page cannot load `chrome://theme/colors.css`, so the values from
+ * Chromium's `cr_shared_vars.css` and the Tab Search and Bookmarks manager
+ * stylesheets are written out here. `light-dark()` does the switching, which
+ * means the page follows the browser's theme without a class on `<html>` and
+ * without a flash of the wrong colours before React starts.
+ */
+:root {
+  color-scheme: light dark;
+
+  --cr-surface: light-dark(#fff, #1f1f1f);
+  --cr-surface1: light-dark(#f8fafd, #27282a);
+  --cr-base-container: light-dark(#eceff7, #282828);
+  --cr-on-surface: light-dark(#1f1f1f, #e3e3e3);
+  --cr-on-surface-variant: light-dark(#444746, #c4c7c5);
+  --cr-primary: light-dark(#0b57d0, #a8c7fa);
+  --cr-on-primary: light-dark(#fff, #062e6f);
+  --cr-outline: light-dark(#747775, #8e918f);
+  --cr-divider: light-dark(#e1e3e1, #3c4043);
+  --cr-hover: light-dark(rgb(31 31 31 / 0.08), rgb(227 227 227 / 0.08));
+  --cr-selected: light-dark(#d3e3fd, #004a77);
+  --cr-menu-bg: light-dark(#fff, #202124);
+  --cr-error: light-dark(#b3261e, #f2b8b5);
+  --cr-elevation-2: 0 1px 2px rgb(0 0 0 / 0.3), 0 2px 6px 2px rgb(0 0 0 / 0.15);
+
+  /* The nine colours Chrome offers for a tab group, as it renders them. */
+  --cr-group-grey: light-dark(#5f6368, #dadce0);
+  --cr-group-blue: light-dark(#1a73e8, #7baaf7);
+  --cr-group-red: light-dark(#d93025, #f28b82);
+  --cr-group-yellow: light-dark(#f9ab00, #fdd663);
+  --cr-group-green: light-dark(#1e8e3e, #81c995);
+  --cr-group-pink: light-dark(#d01884, #ff8bcb);
+  --cr-group-purple: light-dark(#a142f4, #d7aefb);
+  --cr-group-cyan: light-dark(#007b83, #78d9ec);
+  --cr-group-orange: light-dark(#fa903e, #fcad70);
+}

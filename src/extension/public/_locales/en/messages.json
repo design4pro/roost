@@ -1,0 +1,166 @@
+{
+  "extension_description": {
+    "message": "See and manage the tabs and bookmarks of all your browsers in one place."
+  },
+  "app_name": {
+    "message": "Roost"
+  },
+  "search_placeholder": {
+    "message": "Search tabs and bookmarks"
+  },
+  "search_label": {
+    "message": "Search tabs and bookmarks"
+  },
+  "results_count": {
+    "message": "$count$ results",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "devices_heading": {
+    "message": "Devices"
+  },
+  "windows_heading": {
+    "message": "Windows"
+  },
+  "bookmarks_heading": {
+    "message": "Bookmarks"
+  },
+  "window_label": {
+    "message": "Window with $count$ tabs",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "device_offline": {
+    "message": "Offline"
+  },
+  "device_this": {
+    "message": "This browser"
+  },
+  "empty_title": {
+    "message": "Nothing here yet"
+  },
+  "empty_body": {
+    "message": "Open a tab in this browser, or sign in on another one, and it will show up here."
+  },
+  "no_results": {
+    "message": "No tabs or bookmarks match your search."
+  },
+  "banner_connecting": {
+    "message": "Connecting to your hub…"
+  },
+  "banner_offline": {
+    "message": "Not connected. Retrying."
+  },
+  "banner_auth": {
+    "message": "This hub refused this browser’s key. Pair it again to keep syncing."
+  },
+  "banner_repair": {
+    "message": "Pair again"
+  },
+  "banner_quota": {
+    "message": "Your hub has used its daily write allowance. Syncing resumes tomorrow."
+  },
+  "banner_incompatible": {
+    "message": "The extension and the hub speak different versions. Update one of them."
+  },
+  "onboarding_title": {
+    "message": "Connect your hub"
+  },
+  "onboarding_body": {
+    "message": "Roost stores your tabs on infrastructure you own. Deploy a hub to your Cloudflare account, then tell this browser where it is."
+  },
+  "onboarding_step_deploy": {
+    "message": "1. Deploy your hub"
+  },
+  "onboarding_step_deploy_body": {
+    "message": "Copy this key, then open the deploy page and paste it in when Cloudflare asks for PAIRING_SECRET. Already have a hub? Paste its key here instead."
+  },
+  "onboarding_secret_label": {
+    "message": "Pairing key"
+  },
+  "onboarding_copy": {
+    "message": "Copy"
+  },
+  "onboarding_copied": {
+    "message": "Copied"
+  },
+  "onboarding_deploy_link": {
+    "message": "Deploy to Cloudflare"
+  },
+  "onboarding_step_connect": {
+    "message": "2. Connect this browser"
+  },
+  "onboarding_url_label": {
+    "message": "Worker address"
+  },
+  "onboarding_name_label": {
+    "message": "Name for this browser"
+  },
+  "onboarding_connect": {
+    "message": "Connect"
+  },
+  "onboarding_error_url": {
+    "message": "Enter an https address, for example https://sync.example.com"
+  },
+  "onboarding_error_unreachable": {
+    "message": "Nothing answered at that address."
+  },
+  "onboarding_error_wrong_key": {
+    "message": "That address answered, but refused this key."
+  },
+  "lazy_load": {
+    "message": "Load page"
+  },
+  "row_actions": {
+    "message": "Actions for $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "menu_activate_tab": {
+    "message": "Go to tab"
+  },
+  "menu_close_tab": {
+    "message": "Close tab"
+  },
+  "menu_close_window": {
+    "message": "Close window"
+  },
+  "menu_restore_window": {
+    "message": "Restore window here"
+  },
+  "restore_title": {
+    "message": "Restore this window here"
+  },
+  "restore_body": {
+    "message": "$count$ tabs will open in a new window. Only the first one loads; the rest wait until you look at them.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "restore_confirm": {
+    "message": "Restore"
+  },
+  "restore_cancel": {
+    "message": "Cancel"
+  },
+  "restore_started": {
+    "message": "Restoring the window…"
+  },
+  "menu_copy_bookmark": {
+    "message": "Copy to this browser"
+  },
+  "menu_remove_bookmark": {
+    "message": "Delete bookmark"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "extension_description": {
+    "message": "Karty i zakładki wszystkich przeglądarek w jednym miejscu."
+  },
+  "app_name": {
+    "message": "Roost"
+  },
+  "search_placeholder": {
+    "message": "Szukaj kart i zakładek"
+  },
+  "search_label": {
+    "message": "Szukaj kart i zakładek"
+  },
+  "results_count": {
+    "message": "Wyniki: $count$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "devices_heading": {
+    "message": "Urządzenia"
+  },
+  "windows_heading": {
+    "message": "Okna"
+  },
+  "bookmarks_heading": {
+    "message": "Zakładki"
+  },
+  "window_label": {
+    "message": "Okno z $count$ kartami",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "device_offline": {
+    "message": "Offline"
+  },
+  "device_this": {
+    "message": "Ta przeglądarka"
+  },
+  "empty_title": {
+    "message": "Jeszcze pusto"
+  },
+  "empty_body": {
+    "message": "Otwórz kartę w tej przeglądarce albo zaloguj się w innej, a pojawi się tutaj."
+  },
+  "no_results": {
+    "message": "Żadna karta ani zakładka nie pasuje do wyszukiwania."
+  },
+  "banner_connecting": {
+    "message": "Łączenie z hubem…"
+  },
+  "banner_offline": {
+    "message": "Brak połączenia. Ponawiam."
+  },
+  "banner_auth": {
+    "message": "Hub odrzucił klucz tej przeglądarki. Sparuj ją ponownie, aby wznowić synchronizację."
+  },
+  "banner_repair": {
+    "message": "Sparuj ponownie"
+  },
+  "banner_quota": {
+    "message": "Hub wyczerpał dzienny limit zapisów. Synchronizacja wróci jutro."
+  },
+  "banner_incompatible": {
+    "message": "Rozszerzenie i hub mówią różnymi wersjami protokołu. Zaktualizuj jedno z nich."
+  },
+  "onboarding_title": {
+    "message": "Podłącz swój hub"
+  },
+  "onboarding_body": {
+    "message": "Roost trzyma karty na infrastrukturze, która należy do Ciebie. Wdróż hub na swoim koncie Cloudflare, a potem wskaż go tej przeglądarce."
+  },
+  "onboarding_step_deploy": {
+    "message": "1. Wdróż swój hub"
+  },
+  "onboarding_step_deploy_body": {
+    "message": "Skopiuj ten klucz, otwórz stronę wdrożenia i wklej go, gdy Cloudflare zapyta o PAIRING_SECRET. Masz już hub? Wklej tutaj jego klucz."
+  },
+  "onboarding_secret_label": {
+    "message": "Klucz parujący"
+  },
+  "onboarding_copy": {
+    "message": "Kopiuj"
+  },
+  "onboarding_copied": {
+    "message": "Skopiowano"
+  },
+  "onboarding_deploy_link": {
+    "message": "Wdróż na Cloudflare"
+  },
+  "onboarding_step_connect": {
+    "message": "2. Połącz tę przeglądarkę"
+  },
+  "onboarding_url_label": {
+    "message": "Adres Workera"
+  },
+  "onboarding_name_label": {
+    "message": "Nazwa tej przeglądarki"
+  },
+  "onboarding_connect": {
+    "message": "Połącz"
+  },
+  "onboarding_error_url": {
+    "message": "Podaj adres https, na przykład https://sync.example.com"
+  },
+  "onboarding_error_unreachable": {
+    "message": "Pod tym adresem nic nie odpowiada."
+  },
+  "onboarding_error_wrong_key": {
+    "message": "Ten adres odpowiada, ale odrzucił ten klucz."
+  },
+  "lazy_load": {
+    "message": "Wczytaj stronę"
+  },
+  "row_actions": {
+    "message": "Działania dla $title$",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "menu_activate_tab": {
+    "message": "Przejdź do karty"
+  },
+  "menu_close_tab": {
+    "message": "Zamknij kartę"
+  },
+  "menu_close_window": {
+    "message": "Zamknij okno"
+  },
+  "menu_restore_window": {
+    "message": "Odtwórz okno tutaj"
+  },
+  "restore_title": {
+    "message": "Odtwórz to okno tutaj"
+  },
+  "restore_body": {
+    "message": "W nowym oknie otworzy się $count$ kart. Wczyta się tylko pierwsza, reszta poczeka, aż na nią spojrzysz.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "restore_confirm": {
+    "message": "Odtwórz"
+  },
+  "restore_cancel": {
+    "message": "Anuluj"
+  },
+  "restore_started": {
+    "message": "Odtwarzam okno…"
+  },
+  "menu_copy_bookmark": {
+    "message": "Kopiuj do tej przeglądarki"
+  },
+  "menu_remove_bookmark": {
+    "message": "Usuń zakładkę"
+  }
+}

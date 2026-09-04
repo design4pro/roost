@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/**
+ * The tokens above are the source of truth; this only tells Tailwind their
+ * names. There is deliberately no `dark:` variant for colour - `light-dark()`
+ * has already switched by the time a class is applied, and having two
+ * mechanisms would mean two places for the theme to drift.
+ */
+@theme inline {
+  --color-surface: var(--cr-surface);
+  --color-surface1: var(--cr-surface1);
+  --color-container: var(--cr-base-container);
+  --color-on-surface: var(--cr-on-surface);
+  --color-on-surface-variant: var(--cr-on-surface-variant);
+  --color-primary: var(--cr-primary);
+  --color-on-primary: var(--cr-on-primary);
+  --color-outline: var(--cr-outline);
+  --color-divider: var(--cr-divider);
+  --color-hover: var(--cr-hover);
+  --color-selected: var(--cr-selected);
+  --color-menu: var(--cr-menu-bg);
+  --color-error: var(--cr-error);
+
+  --radius-card: 8px;
+  --radius-menu: 4px;
+  --radius-pill: 46px;
+
+  --shadow-elevation-2: var(--cr-elevation-2);
+}
+
+/**
+ * Chrome uses the platform's UI font rather than a font of its own. `system-ui`
+ * is right on macOS and close enough on Linux; Windows needs Segoe named
+ * explicitly, because `system-ui` there resolves to the same face at a
+ * different weight than Chrome's own UI.
+ */
+html {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+body {
+  margin: 0;
+  background: var(--cr-surface1);
+  color: var(--cr-on-surface);
+}
+
+/* Focus is 2px of the primary colour everywhere, as it is in Chrome's own UI. */
+:focus-visible {
+  outline: 2px solid var(--cr-primary);
+  outline-offset: 0;
+}

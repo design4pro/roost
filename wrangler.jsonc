@@ -1,0 +1,44 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "roost",
+  "main": "src/worker/worker.ts",
+  "compatibility_date": "2026-08-17",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // On, because it is the whole address the user gets: the one-click deploy
+  // makes no custom domain, so `roost.<subdomain>.workers.dev` is what they
+  // paste back into the extension. Nothing but the pairing key stands in front
+  // of it. Preview URLs stay off - a Worker with a Durable Object gets none.
+  "workers_dev": true,
+  "preview_urls": false,
+
+  "upload_source_maps": true,
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "invocation_logs": true },
+  },
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
+
+  // One SQLite Durable Object, and only one: a deployment belongs to a single
+  // person, so the object has a fixed name rather than one taken from a claim.
+  // New namespaces can only be SQLite-backed, so no migrations block is needed
+  // - the declarative `exports` form carries the storage kind.
+  "exports": {
+    "UserHub": { "type": "durable-object", "storage": "sqlite" },
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "USER_HUB", "class_name": "UserHub" }],
+  },
+
+  "vars": {
+    // Free-plan Durable Objects allow 100 000 written rows per day per account.
+    // The Worker stops short of that and tells the client to back off, because
+    // the platform's own limit surfaces as a silent failure. "0" disables the
+    // budget, which is what a Paid-plan deployment wants.
+    "WRITE_BUDGET_PER_DAY": "90000",
+  },
+
+  // Secret, asked for by the deploy button and declared in `.dev.vars.example`:
+  //   PAIRING_SECRET  the key every browser must present. Unset means the hub
+  //                   refuses everything, which is the safe way to fail.
+}

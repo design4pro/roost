@@ -1,0 +1,45 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+
+  "include": [
+    ".wxt/wxt.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "eslint.config.js",
+    "prettier.config.js",
+    "vitest.config.ts",
+    "playwright.config.ts",
+    "wxt.config.ts"
+  ],
+
+  "exclude": [
+    "node_modules",
+    ".output",
+    ".wxt/types",
+    ".wxt/eslint-auto-imports.mjs"
+  ],
+
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "paths": {
+      "#/*": ["./src/*"]
+    },
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    /* Linting */
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  }
+}

@@ -1,0 +1,13 @@
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build output and generated types.
+.output
+.wxt
+worker-configuration.d.ts
+
+# Test and coverage artefacts.
+coverage
+playwright-report
+test-results
